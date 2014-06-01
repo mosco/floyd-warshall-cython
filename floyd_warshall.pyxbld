@@ -1,0 +1,14 @@
+"""
+Pretty standard build instructions for pyximport.
+The only interesting part here is the inclusion of the OpenMP libraries. This must be explicitly done, otherwise Cython's prange() magic does not parallelize.
+"""
+def make_ext(modname, pyxfilename):
+    from distutils.extension import Extension
+    ext = Extension(name = modname,
+        sources=[pyxfilename],
+        extra_compile_args=['-O3', '-fopenmp'],
+        extra_link_args=['-fopenmp'])
+    return ext
+
+def make_setup_args():
+    return dict(script_args=["--verbose"])
