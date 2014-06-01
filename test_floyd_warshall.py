@@ -90,12 +90,6 @@ class Timer(object):
     def __exit__(self, type, value, tb):
         self.stop()
 
-# >> floyd_warshall_speed_test()
-#                         Python:  Wall time: 38.764 seconds.  CPU time: 38.750 seconds.
-#                         Cython:  Wall time: 11.669 seconds.  CPU time: 11.670 seconds.
-#            Cython parallelized:  Wall time: 2.818 seconds.  CPU time: 65.570 seconds.
-#                Cython unrolled:  Wall time: 11.338 seconds.  CPU time: 11.360 seconds.
-#   Cython unrolled+parallelized:  Wall time: 2.744 seconds.  CPU time: 65.380 seconds.
 def test_floyd_warshall_speed():
     M = random((500, 500))
     fill_diagonal(M, 0)
