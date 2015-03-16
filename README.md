@@ -2,4 +2,6 @@ An efficient Cython implementation of the Floyd-Warshall algorithm for finding t
 
 See http://en.wikipedia.org/wiki/Floyd-Warshall_algorithm
 
+# Contact
+Feel free to ask any questions: moscovich@gmail.com.
 Amit Moscovich Eiger, 2014
